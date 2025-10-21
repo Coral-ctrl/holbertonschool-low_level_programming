@@ -23,6 +23,7 @@ int _atoi(char *s)
 				result = (s[i] - '0') + result * 10;
 				i++;
 			}
+			break;
 		}
 		i++;
 	}
