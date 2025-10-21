@@ -8,6 +8,8 @@ void print_array(int *a, int n)
 {
 	int i = 0;
 
+	n--;
+
 	while (i <= n && a[i] != '\0')
 	{
 		printf("%d", a[i]);
