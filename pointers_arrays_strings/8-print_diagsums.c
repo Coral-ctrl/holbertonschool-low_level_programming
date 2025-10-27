@@ -13,8 +13,8 @@ void print_diagsums(int *a, int size)
 
 	while (i < size && j >= 0)
 	{
-		sum_a += *(a + (i * size + i) * sizeof(int));
-		sum_b += *(a + (i * size + j) * sizeof(int));
+		sum_a += *(a + (i * size + i));
+		sum_b += *(a + (i * size + j));
 		i++;
 		j--;
 	}
