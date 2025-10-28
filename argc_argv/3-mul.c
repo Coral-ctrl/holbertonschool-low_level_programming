@@ -7,11 +7,11 @@
  *
  * Return: 0 on success
  */
-int main(int argc __attribute__((unused)), char *argv[])
+int main(int argc, char *argv[])
 {
 	int i;
 
-	if (argc > 1)
+	if (argc == 3)
 	{
 		i = atoi(argv[1]) * atoi(argv[2]);
 		printf("%d\n", i);
