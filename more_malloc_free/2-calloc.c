@@ -8,22 +8,22 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	char *con;
-	int i;
+	char *ptr;
+	unsigned int i;
 
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 
-	con = malloc(size * nmemb);
-	if (con == NULL)
+	ptr = malloc(size * nmemb);
+	if (ptr == NULL)
 		return (NULL);
 
-	for (i = 0; i < (int)nmemb; i++)
+	for (i = 0; i < (nmemb * size); i++)
 	{
-		con[i] = 0;
+		ptr[i] = 0;
 	}
 
 
-	return (con);
+	return (ptr);
 }
