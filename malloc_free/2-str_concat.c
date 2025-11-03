@@ -1,6 +1,6 @@
 #include <stdlib.h>
 /**
- * _strdup - concatenates two strings
+ * str_concat - concatenates two strings
  * @s1: first string to concatenate
  * @s2: second string to concatenate
  *
@@ -9,7 +9,7 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *con;
-	unsigned int i = 0, j = 0, len1 = 0, len2 = 0;
+	unsigned int i, j, len1 = 0, len2 = 0;
 
 	if (s1 == NULL)
 		s1 = "";
@@ -22,24 +22,21 @@ char *str_concat(char *s1, char *s2)
 	while (s2[len2] != '\0')
 		len2++;
 
-	con = malloc(sizeof(char) * (len1 + len2 + 2));
+	con = malloc(sizeof(char) * (len1 + len2 + 1));
 	if (con == NULL)
 		return (NULL);
 
-	while (i < len1)
+	for (i = 0; i < len1; i++)
 	{
-		con[j] = s1[i];
-		i++;
-		j++;
+		con[i] = s1[i];
 	}
 
-	for (i = 0; i < len2; i++)
+	for (j = 0; j < len2; j++)
 	{
-		con[j] = s2[i];
-		j++;
+		con[i + j] = s2[j];
 	}
 
-	con[j] = '\0';
+	con[i + j] = '\0';
 
 	return (con);
 }
