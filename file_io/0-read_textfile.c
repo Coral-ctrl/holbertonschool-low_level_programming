@@ -6,7 +6,7 @@
 /**
 * read_textfile - reads a text file and prints it to the POSIX standard output
 * @filename: name of the file to read
-* @lettes: the number of letters to read and print
+* @letters: the number of letters to read and print
 *
 * Return: actual number of letters read and printed, 0 on failure
 */
