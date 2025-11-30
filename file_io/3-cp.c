@@ -115,7 +115,7 @@ int main(int argc, char *argv[])
 
 	fd_to = open_file_to(argv[2]);
 
-	cope_file(fd_from, fd_to);
+	copy_file(fd_from, fd_to);
 
 	close_fd(fd_from);
 	close_fd(fd_to);
