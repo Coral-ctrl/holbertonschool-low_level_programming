@@ -9,8 +9,10 @@
  */
 unsigned long int key_index(const unsigned char *key, unsigned long int size)
 {
-	/* Hash the key using hash_djb2()
+	/**
+	 * Hash the key using hash_djb2()
 	 * Use modulo (% size) to map the huge hash number into array range
-	 * Return that index */
+	 * Return that index
+	 */
 	return (hash_djb2(key) % size);
 }
